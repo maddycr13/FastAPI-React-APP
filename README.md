@@ -12,8 +12,16 @@ This project is a full-stack application using FastAPI for the backend and React
  ```bash
  pip install -r requirements.txt
  ```
+2. **Create and Activate Virtual Environment**:
 
-2. **Run the FastAPI backend**:
+   First, create a virtual environment if you haven't already:
+
+```bash
+python -m venv env
+```
+
+
+3. **Run the FastAPI backend**:
 
   After installing dependencies, start the FastAPI server:
 
@@ -23,7 +31,7 @@ This project is a full-stack application using FastAPI for the backend and React
 
   The backend will be running on ```http://localhost:8000```.
 
-3. **Database Initialization**:
+4. **Database Initialization**:
 
   Ensure the SQLite database is set up by running any necessary migrations or setting up the database manually.
 
