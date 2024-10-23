@@ -7,23 +7,25 @@ This project is a full-stack application using FastAPI for the backend and React
 
 1. **Install Python dependencies**:
 
-   Navigate to the backend directory and run:
+ Navigate to the backend directory and run:
 
  ```bash
  pip install -r requirements.txt
  ```
 2. **Create and Activate Virtual Environment**:
 
-   First, create a virtual environment if you haven't already:
+ First, create a virtual environment if you haven't already:
 
 ```bash
 python -m venv env
 ```
-
+```bash
+source ./env/bin/activate  
+```
 
 3. **Run the FastAPI backend**:
 
-  After installing dependencies, start the FastAPI server:
+After installing dependencies, start the FastAPI server:
 
   ```bash
   uvicorn main:app --reload
@@ -33,7 +35,7 @@ python -m venv env
 
 4. **Database Initialization**:
 
-  Ensure the SQLite database is set up by running any necessary migrations or setting up the database manually.
+Ensure the SQLite database is set up by running any necessary migrations or setting up the database manually.
 
 ## Frontend Setup
 
