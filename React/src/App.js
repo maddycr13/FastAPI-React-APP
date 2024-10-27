@@ -69,7 +69,7 @@ const App = () => {
   };
 
   const handleDelete = async (transaction) => {
-    await api.delete(`/transactions/${transaction.id}`);
+    await api.delete('/transactions/', { data: { id: transaction.id } });
     fetchTransactions();  // Refresh the list after deletion
   };
 
