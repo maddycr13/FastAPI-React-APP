@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns --coverage 'node_modules/(?!axios)/'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -37,5 +37,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js",
+      "!src/serviceWorker.js",
+      "!src/reportWebVitals.js",
+      "!src/setupTests.js"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-jest": "^29.7.0"
   }
 }

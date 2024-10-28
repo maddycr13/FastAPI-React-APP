@@ -42,17 +42,18 @@ const App = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
+  
     if (isEditing) {
       // Update an existing transaction
-      await api.put(`/transactions/${formData.id}`, formData);  // Use PUT for updates
+      await api.put(`/transactions/${formData.id}`, formData);
       setIsEditing(false);  // Reset editing mode
     } else {
       // Create a new transaction
       await api.post('/transactions/', formData);
     }
-
-    fetchTransactions();  // Refresh the list after submission
+  
+    // Fetch updated list of transactions after the form is submitted
+    await fetchTransactions();  // Ensure fetchTransactions correctly updates the state
     resetForm();  // Reset the form after submission
   };
 

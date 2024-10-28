@@ -5,3 +5,8 @@ env/
 #Ignore node.js modules
 
 node_modules/
+
+
+#Ignore cypress
+
+cypress/
